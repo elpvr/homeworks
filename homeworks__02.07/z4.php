@@ -11,7 +11,7 @@
   echo "    ";
   for ($i=1; $i<=10; $i++) {
     for ($j=1; $j<=$i; $j++) {
-      echo "$i*$j=".$i*$j.' &nbsp; ';
+      echo "$j*$i=".$i*$j.' &nbsp; ';
     }
     echo "<br/>\n    ";
   }
@@ -21,7 +21,7 @@
     for ($i=1; $i<=10; $i++) {
       echo "      <tr>";
       for ($j=1; $j<=$i; $j++) {
-        echo "<td>$i*$j=".$i*$j."</td>";
+        echo "<td>$j*$i=".$i*$j."</td>";
       }
       if ($i==9) { echo "<td></td>"; }
       elseif ($i<9) {
