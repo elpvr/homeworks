@@ -1,0 +1,92 @@
+<!-- Да се направи бутон-падащо меню (Components->Button dropdowns) с избор на 3 
+     програмни езика: PHP, JavaScript, Java. В зависимост от избора да се показва 
+     на същата страница съобщение описващо накратко избрания език. -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="dropdown active">
+        <a aria-expanded="false" href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">
+          Изберете език <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+          <li class="active"><a aria-expanded="true" href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">PHP</a></li>
+          <li class=""><a aria-expanded="false" href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">JavaScript</a></li>
+          <li class=""><a aria-expanded="false" href="#dropdown3" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown3">Java</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active in" id="dropdown1" aria-labelledby="dropdown1-tab">
+        <div class="panel  panel-info">
+          <div class="panel-heading">PHP</div>
+          <div class="panel-body">
+            <p>
+              PHP е скриптов език върху сървърната (обслужваща) страна език с отворен код, който е проектиран за 
+              уеб програмиране и е широко използван за създаване на сървърни приложения и динамично уеб-съдържание. 
+              Автор на езика е канадецът от датски произход Размус Лердорф. PHP е рекурсивен акроним от PHP: 
+              Hypertext Preprocessor (като в самото начало има значение, дадено от създателите му, на Personal Home 
+              Page). Пример за PHP приложение е МедияУики - софтуерът, използван от Уикипедия.
+            </p>
+            <p>
+              Началото на PHP е поставено от Размус Лердорф[2] през 1994 г., въпреки че самият Лердорф смята 1995-та 
+              за рождената година на PHP, защото тогава "отваря" кода на новия език за програмиране.[3] В началото 
+              Размус създава Perl скриптове за следене на посещенията на резюмето на личната му страница, които 
+              впоследствие пренаписва и така се създава първата версия на PHP (тогава означаващо Personal Home Page).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+        <div class="panel  panel-info">
+          <div class="panel-heading">JavaScript</div>
+          <div class="panel-body">
+            <p>
+              JavaScript (чете се джаваскрипт) е интерпретируем език за програмиране, разпространяван с повечето 
+              Уеб браузъри. Поддържа обектно-ориентиран и функционален стил на програмиране. Създаден е в Netscape 
+              през 1995-та. Най-често се прилага към HTML-а на Интернет страница с цел добавяне на функционалност и 
+              зареждане на данни. Може да се ползва също за писане на сървърни скриптове NodeJS, както и за много 
+              други приложения. JavaScript не трябва да се бърка с Java, съвпадението на имената е резултат от 
+              маркетингово решение на Netscape. Javascript е стандартизиран под името EcmaScript.
+            </p>
+            <p>
+              JavaScript е разработен първоначално от Брендан Айк под името Mocha, като по-късно е преименуван на 
+              LiveScript и накрая на JavaScript. LiveScript е официалното име на езика когато за първи път бива 
+              пуснат в бета версиите на Netscape Navigator 2.0 през септември 1995 г., но е преименуван на 
+              JavaScript на 4 декември 1995 г.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="dropdown3-tab">
+        <div class="panel  panel-info">
+          <div class="panel-heading">Java</div>
+          <div class="panel-body">
+            <p>
+              Java или Джава е обектно-ориентиран език за програмиране. Кодът, написан на Java не се компилира до 
+              машинен код за определен процесор, а до специфичен за езика код, наречен байт код. Поради това за 
+              изпълнението на програма, написана на Java е необходима т. нар. Виртуална машина (на английски: 
+              Java Virtual Machine).
+            </p>
+            <p>
+              Java е език от високо ниво, който прилича на C# и C++ и донякъде на езици като Delphi, VB.NET и C. 
+              Синтаксисът на Java е сходен до този на C++ и C# и преминаването от тези езици към Java е лесно. 
+              Java програмите са обектно-ориентирани. Те представляват съвкупност от дефиниции на класове, които 
+              съдържат в себе си методи, а в методите е разположена програмната логика.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
