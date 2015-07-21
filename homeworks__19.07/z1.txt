@@ -1,0 +1,24 @@
+a. Да се извлечат всички раси(races), които са от тип дърво.
+SELECT * FROM `races` WHERE type='tree'
+
+b. Да се извлечат всички раси, които са от тип дърво и има коефициент за слънце над 50.
+SELECT * FROM `races` WHERE type='tree' && sun_coef>50
+
+c. Да се извлечат всички магии, които съдържат ‘ur’ или ‘os’ в своето име (magic).
+SELECT * FROM `magics` WHERE `magic` LIKE '%ur%' || `magic` LIKE '%os%'
+
+d. Да се добавят 2 нови раси от тип храст(bush).
+INSERT INTO `races`(`race`,`type`,`superpower`,`water_coef`,`sun_coef`,`population`) VALUES ('new race1','bush','long',65,85,37000)
+INSERT INTO `races`(`race`,`type`,`superpower`,`water_coef`,`sun_coef`,`population`) VALUES ('new race2','bush','hard',75,35,7200)
+
+e.Тъй като е много слънчево напоследък всички раси със слънчев коефициент над 60 са увеличили популацията си с 5%.
+UPDATE `races` SET population=population*1.05 WHERE sun_coef>60
+
+f.По време на горещините мъжките длопи се уголемяват. Да се увеличи теглото на всички длопи от мъжки пол с 5 кг.
+UPDATE `dlops` SET weight=weight+5 WHERE gender='male'
+
+g.Магийте за пълни аматьори са забранени в Длопия. Да се „изтрият” всички магии, които изискват опит под 35. (да им се зададе date_deleted – днешна дата)
+UPDATE `magics` SET date_deleted='2015-07-20' WHERE required_experience<35
+
+h.Да се извлечат всички активни магии.
+SELECT * FROM `magics` WHERE date_deleted is null
